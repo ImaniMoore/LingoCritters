@@ -1,22 +1,21 @@
-import { Geist } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/ui/Navbar";
+import Footer from "../components/ui/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const nunito = Nunito({
   subsets: ["latin"],
+  weight: ["400", "700", "800", "900"],
 });
-
-export const metadata = {
-  title: "LingoCritters",
-  description: "Where every word opens a new world.",
-};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-gray-900">
-        {children}
-      </body>
-    </html>
+    <>
+      <Navbar />
+      <html lang="en">
+        <body className={nunito.className}>{children}</body>
+      </html>
+      <Footer />
+    </>
   );
 }
