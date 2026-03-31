@@ -3,91 +3,55 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const { level, language, lessonTopic } = await request.json();
+    const body = await request.json();
+    const { level, language, lessonTopic } = body;
 
-    if (!level || !language) {
-      return NextResponse.json(
-        { error: "Level and language are required" },
-        { status: 400 },
-      );
-    }
+    const languageNote = language === "spanish" ? "Spanish" : "English";
 
-    // Map level to prompt complexity and word count
-    const levelConfig = {
-      1: {
-        description: "very simple alphabet and letter sounds",
-        wordCount: 15,
-        maxTokens: 100,
-      },
-      2: {
-        description: "simple 40-word lesson with basic vocabulary",
-        wordCount: 40,
-        maxTokens: 150,
-      },
-      3: {
-        description: "60-word lesson with short phrases and sentences",
-        wordCount: 60,
-        maxTokens: 200,
-      },
-      4: {
-        description: "80-word lesson with complete sentences",
-        wordCount: 80,
-        maxTokens: 250,
-      },
-      5: {
-        description: "120-word lesson with connected ideas and variety",
-        wordCount: 120,
-        maxTokens: 300,
-      },
+    // Constraint mapping based on your UI screenshot
+    const constraints = {
+      1: "Alphabet sounds (e.g., A is for Apple. B is for Ball.)",
+      2: "A simple list of 10 basic words separated by periods.",
+      3: "5 short phrases of 2-3 words each.",
+      4: "3 simple, full sentences for a child to repeat.",
+      5: "A single, cohesive story paragraph of 50-60 words.",
     };
 
-    const config = levelConfig[level] || levelConfig[3];
+    // THE FIX: Provide a "Good" example and a "Bad" example to the AI
+    const systemInstruction = `You are a children's teacher. 
+    CRITICAL RULE: Write ONLY the content. 
+    NO headers like "Vocabulary" or "Questions". 
+    NO bullet points. 
+    NO bold text (**). 
+    NO intro/outro. 
+    
+    Example of GOOD Level 5 output:
+    "Today we are visiting a sunny farm. Look at the big red tractor in the field! The fluffy sheep are eating green grass while the pink pigs play in the mud. The farmer is happy because the sun is shining. It is a very busy and fun day for all the animals."
+    
+    Example of BAD Level 5 output:
+    "**A Day on the Farm** **Vocabulary** - Farm: a place..."`;
 
-    // Craft prompt based on language and lesson topic
-    const languageNote =
-      language === "spanish" ? "Write in Spanish." : "Write in English.";
+    const userPrompt = `Level: ${level}. Topic: ${lessonTopic}. Language: ${languageNote}. 
+    Goal: ${constraints[level] || constraints[5]}. 
+    Write ONLY the lesson text now:`;
 
-    const prompt = `Create ${config.description} lesson content for children learning ${language}.
-Topic: ${lessonTopic || "daily activities"}.
+    // Combine them for the model
+    const finalPrompt = `${systemInstruction}\n\nUser: ${userPrompt}\nAssistant:`;
 
-Requirements:
-- Approximately ${config.wordCount} words
-- Age-appropriate for children ages 5-7
-- Use simple, clear language
-- Make it engaging and fun
-- Focus on teaching the topic, not telling a story
-${languageNote}
+    const storyText = await generateStory(finalPrompt);
 
-Just provide the lesson content directly, without any preamble or explanation.`;
-
-    const story = await generateStory(prompt, config.maxTokens);
-
-    // Extract text from response
-    const content =
-      typeof story === "string"
-        ? story
-        : story.generated_text || JSON.stringify(story);
-
-    // Clean up any extra whitespace
-    const cleanedContent = content
-      .trim()
-      .replace(/^(Write|Create|Here's|Here is).*/i, "")
+    // Final scrub to remove any bolding or headers the AI might have snuck in
+    const cleanedStory = storyText
+      .replace(/\*\*.*?\*\*/g, "") // Remove anything inside double asterisks (headers)
+      .replace(/^[A-Z][a-z]+:\s*/gm, "") // Remove "Vocabulary:", "Topic:", etc.
+      .replace(/[\#\-\•]/g, "") // Remove markdown headers, dashes, or bullets
       .trim();
 
-    return NextResponse.json({
-      success: true,
-      story: cleanedContent || content,
-      level,
-      language,
-      topic: lessonTopic,
-    });
+    return NextResponse.json({ success: true, story: cleanedStory });
   } catch (error) {
-    console.error("Story Generation Error:", error);
+    console.error("Route Error:", error);
     return NextResponse.json(
-      {
-        error: error.message,
-        message: "Failed to generate lesson content",
-      },
+      { success: false, error: error.message },
       { status: 500 },
     );
   }

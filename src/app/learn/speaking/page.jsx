@@ -18,6 +18,8 @@ export default function SpeakingPage() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [completedLessons, setCompletedLessons] = useState([]);
 
+  const audioRef = useRef(null);
+
   useEffect(() => {
     if (!user) return;
     const saved = localStorage.getItem(`speaking_progress_${user.id}`);
@@ -31,8 +33,7 @@ export default function SpeakingPage() {
   }, [user]);
 
   const saveProgress = (lessonId) => {
-    if (!lessonId) return;
-    if (completedLessons.includes(lessonId)) return;
+    if (!lessonId || completedLessons.includes(lessonId)) return;
     const updated = [...completedLessons, lessonId];
     setCompletedLessons(updated);
     localStorage.setItem(
@@ -41,48 +42,31 @@ export default function SpeakingPage() {
     );
   };
 
-  const audioRef = useRef(null);
-
   if (!user) return null;
 
   const langKey = (user.secondaryLang || "english").toLowerCase();
   const langData = languageLevels[langKey] ?? languageLevels["english"];
   const userLevel = user.speakingLevel ?? 1;
 
-  // Generate content based on level and lesson type
+  // Optimized logic to match the 5-level UI progression
   const generateLessonContent = async (lesson, level) => {
     let content = "";
 
-    // For Level 1 (Alphabet), extract from activities
+    // LEVEL 1: HARDCODED ALPHABET (Safety first for phonetics)
     if (level === 1) {
       const firstActivity = lesson.activities[0];
       if (firstActivity.type === "alphabet" && firstActivity.items) {
-        // Just list the letters with examples
-        // Keep the punctuation so the TTS backend can use pacing hints
         content = firstActivity.items
-          .map((item) => `${item.letter} - ${item.example}`)
+          .map((item) => `${item.letter} is for ${item.example}`)
           .join(". ");
-        // request slower audio for letters
         setLessonContent(content);
-        await generateAudio(content, 0.8);
+        await generateAudio(content, 0.8); // Slower for letters
         return;
       }
     }
 
-    // Levels 2-5: use AI to generate content based on lesson context
+    // LEVELS 2-5: AI Generated based on UI descriptions
     try {
-      const instruction = lesson.activities[0]?.instruction || lesson.title;
-      const prompt = `Create a short, simple ${
-        level === 2
-          ? "20-word"
-          : level === 3
-            ? "30-word"
-            : level === 4
-              ? "50-word"
-              : "80-word"
-      } lesson in English for children about "${lesson.title}". 
-Keep it age-appropriate and fun. Start teaching the topic directly.`;
-
       const response = await fetch("/api/speaking/generate-story", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -97,20 +81,17 @@ Keep it age-appropriate and fun. Start teaching the topic directly.`;
       if (data.success) {
         content = data.story;
       } else {
-        content = lesson.title;
+        content = `Let's practice ${lesson.title} together!`;
       }
     } catch (error) {
       console.error("Content generation failed:", error);
-      content = lesson.title; // Fallback to title
+      content = `Time to learn about ${lesson.title}.`;
     }
 
     setLessonContent(content);
-    // normal speed for generated stories
-    await generateAudio(content, 1.0);
+    await generateAudio(content, 1.0); // Normal speed for words/sentences
   };
 
-  // Generate TTS audio
-  // speed: 1 = normal, <1 = slower, >1 = faster
   const generateAudio = async (text, speed = 1.0) => {
     setIsGeneratingAudio(true);
     try {
@@ -129,8 +110,6 @@ Keep it age-appropriate and fun. Start teaching the topic directly.`;
         const audioBlob = base64ToBlob(data.audio, data.mimeType);
         const url = URL.createObjectURL(audioBlob);
         setAudioUrl(url);
-      } else {
-        console.error("TTS API returned failure:", data);
       }
     } catch (error) {
       console.error("Audio generation failed:", error);
@@ -139,7 +118,7 @@ Keep it age-appropriate and fun. Start teaching the topic directly.`;
     }
   };
 
-  // Level Selection View
+  // Views Logic (Levels/Lessons/Playing)
   if (view === "levels") {
     return (
       <div className="min-h-screen bg-warm-white font-display">
@@ -165,17 +144,13 @@ Keep it age-appropriate and fun. Start teaching the topic directly.`;
             <span className="text-5xl">🦜</span>
             <div>
               <h1 className="text-4xl font-black text-deep-dark">
-                Speaking Practice
+                Choose a Level
               </h1>
               <p className="font-bold text-deep-dark opacity-70">
-                Listen and learn with Pico!
+                Follow the path to master {langKey}!
               </p>
             </div>
           </div>
-
-          <h2 className="text-2xl font-black text-deep-dark mb-6">
-            Choose a Level
-          </h2>
 
           <div className="space-y-3">
             {langData.levels.map((lvl) => {
@@ -220,7 +195,6 @@ Keep it age-appropriate and fun. Start teaching the topic directly.`;
     );
   }
 
-  // Lessons View
   if (view === "lessons" && selectedLevel) {
     return (
       <div className="min-h-screen bg-warm-white font-display">
@@ -240,12 +214,7 @@ Keep it age-appropriate and fun. Start teaching the topic directly.`;
             </span>
           </div>
         </div>
-
         <div className="max-w-2xl mx-auto px-6 py-10">
-          <h2 className="text-2xl font-black text-deep-dark mb-6">
-            Choose a Lesson
-          </h2>
-
           <div className="space-y-4">
             {selectedLevel.lessons.map((lesson, i) => (
               <button
@@ -278,7 +247,6 @@ Keep it age-appropriate and fun. Start teaching the topic directly.`;
     );
   }
 
-  // Playing View
   if (view === "playing" && selectedLesson) {
     return (
       <PlayingView
@@ -290,21 +258,15 @@ Keep it age-appropriate and fun. Start teaching the topic directly.`;
         audioRef={audioRef}
         onPlayChange={setIsPlaying}
         onBack={() => {
-          setSelectedLesson(null);
+          setView("lessons");
           setLessonContent("");
           setAudioUrl(null);
-          setIsPlaying(false);
-          setView("lessons");
         }}
         onNext={() => {
-          // persist progress for this speaking lesson
-          saveProgress(selectedLesson?.id);
-          // reset UI and go back to lessons
-          setSelectedLesson(null);
+          saveProgress(selectedLesson.id);
+          setView("lessons");
           setLessonContent("");
           setAudioUrl(null);
-          setIsPlaying(false);
-          setView("lessons");
         }}
       />
     );
@@ -313,7 +275,6 @@ Keep it age-appropriate and fun. Start teaching the topic directly.`;
   return null;
 }
 
-// Playing View Component
 function PlayingView({
   lesson,
   content,
@@ -335,15 +296,13 @@ function PlayingView({
           >
             ← Back
           </button>
-          <span className="text-white font-black text-lg">🦜 Listening</span>
+          <span className="text-white font-black text-lg">
+            🦜 Pico is Speaking...
+          </span>
         </div>
       </div>
-
       <div className="flex-1 max-w-2xl mx-auto px-6 py-12 flex flex-col items-center justify-center gap-8 w-full">
-        {/* Icon */}
-        <div className="text-9xl">🦜</div>
-
-        {/* Lesson Title */}
+        <div className="text-9xl animate-bounce-slow">🦜</div>
         <div className="text-center">
           <p className="text-4xl font-black text-deep-dark mb-2">
             {lesson.title}
@@ -352,17 +311,13 @@ function PlayingView({
             <p className="text-lg font-bold opacity-60">{lesson.subtitle}</p>
           )}
         </div>
-
-        {/* Lesson Content */}
         {content && (
           <div className="bg-white border-4 border-deep-dark rounded-3xl p-8 shadow-comic-xl w-full">
-            <p className="text-xl leading-relaxed text-deep-dark font-semibold text-center">
+            <p className="text-2xl leading-relaxed text-deep-dark font-black text-center">
               {content}
             </p>
           </div>
         )}
-
-        {/* Audio Player */}
         {audioUrl && (
           <div className="w-full flex flex-col items-center gap-4">
             <audio
@@ -373,48 +328,35 @@ function PlayingView({
               onEnded={() => onPlayChange(false)}
             />
             <button
-              onClick={() => {
-                if (isPlaying) {
-                  audioRef.current?.pause();
-                } else {
-                  audioRef.current?.play();
-                }
-              }}
+              onClick={() =>
+                isPlaying ? audioRef.current?.pause() : audioRef.current?.play()
+              }
               className="bg-pico-orange text-white font-black py-6 px-12 rounded-2xl border-4 border-deep-dark shadow-comic-xl hover:-translate-y-1 transition-all text-2xl"
             >
-              {isPlaying ? "⏸ Pause" : "▶ Listen"}
+              {isPlaying ? "⏸ Pause" : "▶ Listen to Pico"}
             </button>
           </div>
         )}
-
-        {/* Loading State */}
         {isGeneratingAudio && (
-          <div className="text-center">
-            <p className="text-lg font-black text-deep-dark opacity-60">
-              Pico is preparing the audio...
-            </p>
-          </div>
+          <p className="text-lg font-black text-deep-dark animate-pulse">
+            Pico is thinking...
+          </p>
         )}
-
-        {/* Next Button */}
         <button
           onClick={onNext}
-          className="bg-star-yellow text-deep-dark font-black py-4 px-10 rounded-2xl border-4 border-deep-dark shadow-comic-xl hover:-translate-y-1 transition-all text-lg"
+          className="mt-4 bg-star-yellow text-deep-dark font-black py-4 px-10 rounded-2xl border-4 border-deep-dark shadow-comic-xl hover:-translate-y-1 transition-all text-lg"
         >
-          Next Lesson →
+          Finish Lesson →
         </button>
       </div>
     </div>
   );
 }
 
-// Helper function
 function base64ToBlob(base64, mimeType) {
   const byteCharacters = atob(base64);
   const byteNumbers = new Array(byteCharacters.length);
-  for (let i = 0; i < byteCharacters.length; i++) {
+  for (let i = 0; i < byteCharacters.length; i++)
     byteNumbers[i] = byteCharacters.charCodeAt(i);
-  }
-  const byteArray = new Uint8Array(byteNumbers);
-  return new Blob([byteArray], { type: mimeType });
+  return new Blob([new Uint8Array(byteNumbers)], { type: mimeType });
 }
