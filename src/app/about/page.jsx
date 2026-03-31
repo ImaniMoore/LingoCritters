@@ -41,8 +41,8 @@ export default function About() {
           <div className="max-w-2xl mx-auto flex flex-col items-center gap-8">
             <div className="w-40 h-40 rounded-full border-4 border-white shadow-comic-xl overflow-hidden bg-warm-white">
               <img
-                src="/images/creator.jpg"
-                alt="Creator photo"
+                src=""
+                alt="me"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -1,16 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-const languages = ["English", "Spanish", "Vietnamese"];
+import { useRouter } from "next/navigation";
+import { useAuth } from "../context/AuthContext";
+
+const languages = ["English", "Spanish"];
 
 export default function Home() {
   const [lang1, setLang1] = useState("English");
   const [lang2, setLang2] = useState("Spanish");
+  const { user } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user) {
+      router.replace(user.accountType === "parent" ? "/dashboard" : "/learn");
+    }
+  }, [user, router]);
 
   return (
     <>
       <main className="min-h-screen font-display overflow-x-hidden">
+        {/* ── HERO ── warm white bg, purple + orange accent blobs */}
         {/* ── HERO ── warm white bg, purple + orange accent blobs */}
         <section className="relative bg-warm-white py-24 px-6 text-center overflow-hidden">
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-pico-orange rounded-full border-4 border-deep-dark opacity-20" />

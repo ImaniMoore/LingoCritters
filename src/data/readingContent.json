@@ -1,0 +1,1770 @@
+{
+  "meta": {
+    "version": "1.0",
+    "supportedLanguages": ["english", "spanish"],
+    "levels": 5,
+    "levelDescriptions": {
+      "1": "Alphabet — letter names and sounds",
+      "2": "Basic Words — 3-4 letter words with pictures",
+      "3": "Short Phrases — 2-3 word combinations",
+      "4": "Simple Sentences — full subject-verb-object sentences",
+      "5": "Intermediate Sentences — connected ideas and short paragraphs"
+    }
+  },
+  "english": {
+    "language": "English",
+    "levels": [
+      {
+        "level": 1,
+        "title": "The Alphabet",
+        "description": "Learn every letter and the sound it makes!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "en-1-1",
+            "title": "Letters A to F",
+            "activities": [
+              {
+                "id": "en-1-1-1",
+                "type": "alphabet",
+                "instruction": "Look at the letter. Say its name out loud!",
+                "items": [
+                  {
+                    "letter": "A",
+                    "sound": "ay",
+                    "example": "Apple",
+                    "emoji": "🍎"
+                  },
+                  {
+                    "letter": "B",
+                    "sound": "bee",
+                    "example": "Ball",
+                    "emoji": "⚽"
+                  },
+                  {
+                    "letter": "C",
+                    "sound": "see",
+                    "example": "Cat",
+                    "emoji": "🐱"
+                  },
+                  {
+                    "letter": "D",
+                    "sound": "dee",
+                    "example": "Dog",
+                    "emoji": "🐶"
+                  },
+                  {
+                    "letter": "E",
+                    "sound": "ee",
+                    "example": "Egg",
+                    "emoji": "🥚"
+                  },
+                  {
+                    "letter": "F",
+                    "sound": "ef",
+                    "example": "Fish",
+                    "emoji": "🐟"
+                  }
+                ]
+              },
+              {
+                "id": "en-1-1-2",
+                "type": "alphabet_match",
+                "instruction": "Match the big letter to the small letter!",
+                "items": [
+                  {
+                    "uppercase": "A",
+                    "lowercase": "a"
+                  },
+                  {
+                    "uppercase": "B",
+                    "lowercase": "b"
+                  },
+                  {
+                    "uppercase": "C",
+                    "lowercase": "c"
+                  },
+                  {
+                    "uppercase": "D",
+                    "lowercase": "d"
+                  },
+                  {
+                    "uppercase": "E",
+                    "lowercase": "e"
+                  },
+                  {
+                    "uppercase": "F",
+                    "lowercase": "f"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "en-1-2",
+            "title": "Letters G to L",
+            "activities": [
+              {
+                "id": "en-1-2-1",
+                "type": "alphabet",
+                "instruction": "Look at the letter. Say its name out loud!",
+                "items": [
+                  {
+                    "letter": "G",
+                    "sound": "jee",
+                    "example": "Goat",
+                    "emoji": "🐐"
+                  },
+                  {
+                    "letter": "H",
+                    "sound": "aych",
+                    "example": "Hat",
+                    "emoji": "🎩"
+                  },
+                  {
+                    "letter": "I",
+                    "sound": "eye",
+                    "example": "Ice cream",
+                    "emoji": "🍦"
+                  },
+                  {
+                    "letter": "J",
+                    "sound": "jay",
+                    "example": "Jar",
+                    "emoji": "🫙"
+                  },
+                  {
+                    "letter": "K",
+                    "sound": "kay",
+                    "example": "Kite",
+                    "emoji": "🪁"
+                  },
+                  {
+                    "letter": "L",
+                    "sound": "el",
+                    "example": "Lion",
+                    "emoji": "🦁"
+                  }
+                ]
+              },
+              {
+                "id": "en-1-2-2",
+                "type": "alphabet_match",
+                "instruction": "Match the big letter to the small letter!",
+                "items": [
+                  {
+                    "uppercase": "G",
+                    "lowercase": "g"
+                  },
+                  {
+                    "uppercase": "H",
+                    "lowercase": "h"
+                  },
+                  {
+                    "uppercase": "I",
+                    "lowercase": "i"
+                  },
+                  {
+                    "uppercase": "J",
+                    "lowercase": "j"
+                  },
+                  {
+                    "uppercase": "K",
+                    "lowercase": "k"
+                  },
+                  {
+                    "uppercase": "L",
+                    "lowercase": "l"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "en-1-3",
+            "title": "Letters M to R",
+            "activities": [
+              {
+                "id": "en-1-3-1",
+                "type": "alphabet",
+                "instruction": "Look at the letter. Say its name out loud!",
+                "items": [
+                  {
+                    "letter": "M",
+                    "sound": "em",
+                    "example": "Moon",
+                    "emoji": "🌙"
+                  },
+                  {
+                    "letter": "N",
+                    "sound": "en",
+                    "example": "Nest",
+                    "emoji": "🪹"
+                  },
+                  {
+                    "letter": "O",
+                    "sound": "oh",
+                    "example": "Orange",
+                    "emoji": "🍊"
+                  },
+                  {
+                    "letter": "P",
+                    "sound": "pee",
+                    "example": "Pig",
+                    "emoji": "🐷"
+                  },
+                  {
+                    "letter": "Q",
+                    "sound": "kyoo",
+                    "example": "Queen",
+                    "emoji": "👑"
+                  },
+                  {
+                    "letter": "R",
+                    "sound": "ar",
+                    "example": "Rainbow",
+                    "emoji": "🌈"
+                  }
+                ]
+              },
+              {
+                "id": "en-1-3-2",
+                "type": "alphabet_match",
+                "instruction": "Match the big letter to the small letter!",
+                "items": [
+                  {
+                    "uppercase": "M",
+                    "lowercase": "m"
+                  },
+                  {
+                    "uppercase": "N",
+                    "lowercase": "n"
+                  },
+                  {
+                    "uppercase": "O",
+                    "lowercase": "o"
+                  },
+                  {
+                    "uppercase": "P",
+                    "lowercase": "p"
+                  },
+                  {
+                    "uppercase": "Q",
+                    "lowercase": "q"
+                  },
+                  {
+                    "uppercase": "R",
+                    "lowercase": "r"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "en-1-4",
+            "title": "Letters S to Z",
+            "activities": [
+              {
+                "id": "en-1-4-1",
+                "type": "alphabet",
+                "instruction": "Look at the letter. Say its name out loud!",
+                "items": [
+                  {
+                    "letter": "S",
+                    "sound": "es",
+                    "example": "Sun",
+                    "emoji": "☀️"
+                  },
+                  {
+                    "letter": "T",
+                    "sound": "tee",
+                    "example": "Tree",
+                    "emoji": "🌳"
+                  },
+                  {
+                    "letter": "U",
+                    "sound": "yoo",
+                    "example": "Umbrella",
+                    "emoji": "☂️"
+                  },
+                  {
+                    "letter": "V",
+                    "sound": "vee",
+                    "example": "Van",
+                    "emoji": "🚐"
+                  },
+                  {
+                    "letter": "W",
+                    "sound": "double-yoo",
+                    "example": "Water",
+                    "emoji": "💧"
+                  },
+                  {
+                    "letter": "X",
+                    "sound": "eks",
+                    "example": "X-ray",
+                    "emoji": "🩻"
+                  },
+                  {
+                    "letter": "Y",
+                    "sound": "why",
+                    "example": "Yarn",
+                    "emoji": "🧶"
+                  },
+                  {
+                    "letter": "Z",
+                    "sound": "zee",
+                    "example": "Zebra",
+                    "emoji": "🦓"
+                  }
+                ]
+              },
+              {
+                "id": "en-1-4-2",
+                "type": "alphabet_match",
+                "instruction": "Match the big letter to the small letter!",
+                "items": [
+                  {
+                    "uppercase": "S",
+                    "lowercase": "s"
+                  },
+                  {
+                    "uppercase": "T",
+                    "lowercase": "t"
+                  },
+                  {
+                    "uppercase": "U",
+                    "lowercase": "u"
+                  },
+                  {
+                    "uppercase": "V",
+                    "lowercase": "v"
+                  },
+                  {
+                    "uppercase": "W",
+                    "lowercase": "w"
+                  },
+                  {
+                    "uppercase": "X",
+                    "lowercase": "x"
+                  },
+                  {
+                    "uppercase": "Y",
+                    "lowercase": "y"
+                  },
+                  {
+                    "uppercase": "Z",
+                    "lowercase": "z"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Basic Words",
+        "description": "Learn short, simple words with pictures!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "en-2-1",
+            "title": "Animals",
+            "activities": [
+              {
+                "id": "en-2-1-1",
+                "type": "word",
+                "instruction": "Read the word, then say it out loud!",
+                "items": [
+                  {
+                    "word": "cat",
+                    "emoji": "🐱",
+                    "syllables": "cat"
+                  },
+                  {
+                    "word": "dog",
+                    "emoji": "🐶",
+                    "syllables": "dog"
+                  },
+                  {
+                    "word": "cow",
+                    "emoji": "🐄",
+                    "syllables": "cow"
+                  },
+                  {
+                    "word": "hen",
+                    "emoji": "🐔",
+                    "syllables": "hen"
+                  },
+                  {
+                    "word": "pig",
+                    "emoji": "🐷",
+                    "syllables": "pig"
+                  },
+                  {
+                    "word": "bee",
+                    "emoji": "🐝",
+                    "syllables": "bee"
+                  }
+                ]
+              },
+              {
+                "id": "en-2-1-2",
+                "type": "word_select",
+                "instruction": "Which word matches the picture?",
+                "items": [
+                  {
+                    "emoji": "🐱",
+                    "answer": "cat",
+                    "choices": ["cat", "cup", "car"]
+                  },
+                  {
+                    "emoji": "🐶",
+                    "answer": "dog",
+                    "choices": ["dot", "dog", "dig"]
+                  },
+                  {
+                    "emoji": "🐷",
+                    "answer": "pig",
+                    "choices": ["pin", "pie", "pig"]
+                  },
+                  {
+                    "emoji": "🐝",
+                    "answer": "bee",
+                    "choices": ["bed", "bee", "bat"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "en-2-2",
+            "title": "Food",
+            "activities": [
+              {
+                "id": "en-2-2-1",
+                "type": "word",
+                "instruction": "Read the word, then say it out loud!",
+                "items": [
+                  {
+                    "word": "egg",
+                    "emoji": "🥚",
+                    "syllables": "egg"
+                  },
+                  {
+                    "word": "milk",
+                    "emoji": "🥛",
+                    "syllables": "milk"
+                  },
+                  {
+                    "word": "rice",
+                    "emoji": "🍚",
+                    "syllables": "rice"
+                  },
+                  {
+                    "word": "cake",
+                    "emoji": "🎂",
+                    "syllables": "cake"
+                  },
+                  {
+                    "word": "soup",
+                    "emoji": "🍲",
+                    "syllables": "soup"
+                  },
+                  {
+                    "word": "meat",
+                    "emoji": "🥩",
+                    "syllables": "meat"
+                  }
+                ]
+              },
+              {
+                "id": "en-2-2-2",
+                "type": "word_select",
+                "instruction": "Which word matches the picture?",
+                "items": [
+                  {
+                    "emoji": "🥚",
+                    "answer": "egg",
+                    "choices": ["eel", "egg", "elf"]
+                  },
+                  {
+                    "emoji": "🥛",
+                    "answer": "milk",
+                    "choices": ["mint", "mill", "milk"]
+                  },
+                  {
+                    "emoji": "🎂",
+                    "answer": "cake",
+                    "choices": ["cave", "cake", "came"]
+                  },
+                  {
+                    "emoji": "🍲",
+                    "answer": "soup",
+                    "choices": ["soap", "soup", "sort"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "en-2-3",
+            "title": "Colors & Shapes",
+            "activities": [
+              {
+                "id": "en-2-3-1",
+                "type": "word",
+                "instruction": "Read the word, then say it out loud!",
+                "items": [
+                  {
+                    "word": "red",
+                    "emoji": "🔴",
+                    "syllables": "red"
+                  },
+                  {
+                    "word": "blue",
+                    "emoji": "🔵",
+                    "syllables": "blue"
+                  },
+                  {
+                    "word": "green",
+                    "emoji": "🟢",
+                    "syllables": "green"
+                  },
+                  {
+                    "word": "big",
+                    "emoji": "🐘",
+                    "syllables": "big"
+                  },
+                  {
+                    "word": "small",
+                    "emoji": "🐭",
+                    "syllables": "small"
+                  },
+                  {
+                    "word": "round",
+                    "emoji": "⭕",
+                    "syllables": "round"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "title": "Short Phrases",
+        "description": "Put words together to make phrases!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "en-3-1",
+            "title": "Describing Things",
+            "activities": [
+              {
+                "id": "en-3-1-1",
+                "type": "phrase",
+                "instruction": "Read the phrase out loud!",
+                "items": [
+                  {
+                    "phrase": "big dog",
+                    "emoji": "🐕",
+                    "highlight": ["big", "dog"]
+                  },
+                  {
+                    "phrase": "red apple",
+                    "emoji": "🍎",
+                    "highlight": ["red", "apple"]
+                  },
+                  {
+                    "phrase": "small cat",
+                    "emoji": "🐱",
+                    "highlight": ["small", "cat"]
+                  },
+                  {
+                    "phrase": "blue bird",
+                    "emoji": "🐦",
+                    "highlight": ["blue", "bird"]
+                  },
+                  {
+                    "phrase": "hot soup",
+                    "emoji": "🍲",
+                    "highlight": ["hot", "soup"]
+                  },
+                  {
+                    "phrase": "cold milk",
+                    "emoji": "🥛",
+                    "highlight": ["cold", "milk"]
+                  }
+                ]
+              },
+              {
+                "id": "en-3-1-2",
+                "type": "phrase_build",
+                "instruction": "Tap the words in the right order to build the phrase!",
+                "items": [
+                  {
+                    "emoji": "🍎",
+                    "answer": ["red", "apple"],
+                    "scrambled": ["apple", "red"]
+                  },
+                  {
+                    "emoji": "🐕",
+                    "answer": ["big", "dog"],
+                    "scrambled": ["dog", "big"]
+                  },
+                  {
+                    "emoji": "🐱",
+                    "answer": ["small", "cat"],
+                    "scrambled": ["cat", "small"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "en-3-2",
+            "title": "Action Phrases",
+            "activities": [
+              {
+                "id": "en-3-2-1",
+                "type": "phrase",
+                "instruction": "Read the phrase out loud!",
+                "items": [
+                  {
+                    "phrase": "run fast",
+                    "emoji": "🏃",
+                    "highlight": ["run", "fast"]
+                  },
+                  {
+                    "phrase": "eat food",
+                    "emoji": "🍽️",
+                    "highlight": ["eat", "food"]
+                  },
+                  {
+                    "phrase": "see bird",
+                    "emoji": "🐦",
+                    "highlight": ["see", "bird"]
+                  },
+                  {
+                    "phrase": "hold on",
+                    "emoji": "✋",
+                    "highlight": ["hold", "on"]
+                  },
+                  {
+                    "phrase": "sit down",
+                    "emoji": "🪑",
+                    "highlight": ["sit", "down"]
+                  },
+                  {
+                    "phrase": "wake up",
+                    "emoji": "⏰",
+                    "highlight": ["wake", "up"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "title": "Simple Sentences",
+        "description": "Read full sentences from start to finish!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "en-4-1",
+            "title": "What Do They Do?",
+            "activities": [
+              {
+                "id": "en-4-1-1",
+                "type": "sentence",
+                "instruction": "Read the sentence. Can you understand it?",
+                "items": [
+                  {
+                    "sentence": "The cat sits on the mat.",
+                    "emoji": "🐱",
+                    "focus": "subject-verb"
+                  },
+                  {
+                    "sentence": "The dog runs in the park.",
+                    "emoji": "🐶",
+                    "focus": "subject-verb"
+                  },
+                  {
+                    "sentence": "The bird sings a song.",
+                    "emoji": "🐦",
+                    "focus": "subject-verb"
+                  },
+                  {
+                    "sentence": "The pig eats the corn.",
+                    "emoji": "🐷",
+                    "focus": "subject-verb-object"
+                  },
+                  {
+                    "sentence": "The hen lays an egg.",
+                    "emoji": "🐔",
+                    "focus": "subject-verb-object"
+                  }
+                ]
+              },
+              {
+                "id": "en-4-1-2",
+                "type": "sentence_build",
+                "instruction": "Put the words in order to make a sentence!",
+                "items": [
+                  {
+                    "answer": ["The", "cat", "sits", "on", "the", "mat."],
+                    "scrambled": ["mat.", "sits", "The", "on", "the", "cat"],
+                    "emoji": "🐱"
+                  },
+                  {
+                    "answer": ["The", "dog", "runs", "in", "the", "park."],
+                    "scrambled": ["park.", "in", "runs", "dog", "the", "The"],
+                    "emoji": "🐶"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "en-4-2",
+            "title": "Where Are They?",
+            "activities": [
+              {
+                "id": "en-4-2-1",
+                "type": "sentence",
+                "instruction": "Read the sentence. Can you understand it?",
+                "items": [
+                  {
+                    "sentence": "The ball is under the bed.",
+                    "emoji": "🛏️",
+                    "focus": "location"
+                  },
+                  {
+                    "sentence": "The book is on the table.",
+                    "emoji": "📖",
+                    "focus": "location"
+                  },
+                  {
+                    "sentence": "The fish is in the bowl.",
+                    "emoji": "🐟",
+                    "focus": "location"
+                  },
+                  {
+                    "sentence": "The sun is in the sky.",
+                    "emoji": "☀️",
+                    "focus": "location"
+                  },
+                  {
+                    "sentence": "The flower is in the pot.",
+                    "emoji": "🌸",
+                    "focus": "location"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "title": "Intermediate Sentences",
+        "description": "Read longer ideas and short stories!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "en-5-1",
+            "title": "A Day on the Farm",
+            "activities": [
+              {
+                "id": "en-5-1-1",
+                "type": "paragraph",
+                "instruction": "Read the whole story!",
+                "items": [
+                  {
+                    "title": "Morning on the Farm",
+                    "text": "The sun rises over the farm. The hen wakes up first. She walks to the barn and lays a big egg. The dog hears her and starts to bark. The farmer comes out and says good morning to all the animals.",
+                    "emoji": "🌅",
+                    "comprehension": [
+                      {
+                        "question": "What does the hen do first?",
+                        "answer": "She lays a big egg.",
+                        "choices": [
+                          "She runs.",
+                          "She lays a big egg.",
+                          "She goes to sleep."
+                        ]
+                      },
+                      {
+                        "question": "Who says good morning?",
+                        "answer": "The farmer.",
+                        "choices": ["The dog.", "The hen.", "The farmer."]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "en-5-2",
+            "title": "A Day at the Park",
+            "activities": [
+              {
+                "id": "en-5-2-1",
+                "type": "paragraph",
+                "instruction": "Read the whole story!",
+                "items": [
+                  {
+                    "title": "Fun at the Park",
+                    "text": "Mia and her dog go to the park. The dog runs and plays in the grass. Mia sits under a big tree. She sees a blue bird singing in the branches. The wind blows softly. It is a happy day.",
+                    "emoji": "🌳",
+                    "comprehension": [
+                      {
+                        "question": "Where does the dog play?",
+                        "answer": "In the grass.",
+                        "choices": [
+                          "In the tree.",
+                          "In the grass.",
+                          "In the water."
+                        ]
+                      },
+                      {
+                        "question": "What does Mia see in the tree?",
+                        "answer": "A blue bird.",
+                        "choices": ["A nest.", "A blue bird.", "A red flower."]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "en-5-3",
+            "title": "Connected Sentences",
+            "activities": [
+              {
+                "id": "en-5-3-1",
+                "type": "sentence",
+                "instruction": "Read each sentence carefully!",
+                "items": [
+                  {
+                    "sentence": "The little girl has a red umbrella.",
+                    "emoji": "☂️",
+                    "focus": "adjective"
+                  },
+                  {
+                    "sentence": "Her dog is brown and very fluffy.",
+                    "emoji": "🐶",
+                    "focus": "adjective"
+                  },
+                  {
+                    "sentence": "They walk slowly down the wet street.",
+                    "emoji": "🌧️",
+                    "focus": "adverb"
+                  },
+                  {
+                    "sentence": "She holds the umbrella high over her head.",
+                    "emoji": "☁️",
+                    "focus": "adverb"
+                  },
+                  {
+                    "sentence": "The dog shakes the rain off his fur.",
+                    "emoji": "💦",
+                    "focus": "action"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "spanish": {
+    "language": "Español",
+    "levels": [
+      {
+        "level": 1,
+        "title": "El Alfabeto",
+        "description": "¡Aprende cada letra y el sonido que hace!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "es-1-1",
+            "title": "Letras A a la F",
+            "activities": [
+              {
+                "id": "es-1-1-1",
+                "type": "alphabet",
+                "instruction": "¡Mira la letra y di su nombre en voz alta!",
+                "items": [
+                  {
+                    "letter": "A",
+                    "sound": "ah",
+                    "example": "Árbol",
+                    "emoji": "🌳"
+                  },
+                  {
+                    "letter": "B",
+                    "sound": "beh",
+                    "example": "Barco",
+                    "emoji": "⛵"
+                  },
+                  {
+                    "letter": "C",
+                    "sound": "seh",
+                    "example": "Casa",
+                    "emoji": "🏠"
+                  },
+                  {
+                    "letter": "D",
+                    "sound": "deh",
+                    "example": "Dedo",
+                    "emoji": "👆"
+                  },
+                  {
+                    "letter": "E",
+                    "sound": "eh",
+                    "example": "Elefante",
+                    "emoji": "🐘"
+                  },
+                  {
+                    "letter": "F",
+                    "sound": "efeh",
+                    "example": "Flor",
+                    "emoji": "🌸"
+                  }
+                ]
+              },
+              {
+                "id": "es-1-1-2",
+                "type": "alphabet_match",
+                "instruction": "¡Une la letra grande con la letra pequeña!",
+                "items": [
+                  {
+                    "uppercase": "A",
+                    "lowercase": "a"
+                  },
+                  {
+                    "uppercase": "B",
+                    "lowercase": "b"
+                  },
+                  {
+                    "uppercase": "C",
+                    "lowercase": "c"
+                  },
+                  {
+                    "uppercase": "D",
+                    "lowercase": "d"
+                  },
+                  {
+                    "uppercase": "E",
+                    "lowercase": "e"
+                  },
+                  {
+                    "uppercase": "F",
+                    "lowercase": "f"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "es-1-2",
+            "title": "Letras G a la L",
+            "activities": [
+              {
+                "id": "es-1-2-1",
+                "type": "alphabet",
+                "instruction": "¡Mira la letra y di su nombre en voz alta!",
+                "items": [
+                  {
+                    "letter": "G",
+                    "sound": "heh",
+                    "example": "Gato",
+                    "emoji": "🐱"
+                  },
+                  {
+                    "letter": "H",
+                    "sound": "acheh",
+                    "example": "Huevo",
+                    "emoji": "🥚"
+                  },
+                  {
+                    "letter": "I",
+                    "sound": "ee",
+                    "example": "Iguana",
+                    "emoji": "🦎"
+                  },
+                  {
+                    "letter": "J",
+                    "sound": "hotah",
+                    "example": "Jabón",
+                    "emoji": "🧼"
+                  },
+                  {
+                    "letter": "K",
+                    "sound": "kah",
+                    "example": "Koala",
+                    "emoji": "🐨"
+                  },
+                  {
+                    "letter": "L",
+                    "sound": "eleh",
+                    "example": "Luna",
+                    "emoji": "🌙"
+                  }
+                ]
+              },
+              {
+                "id": "es-1-2-2",
+                "type": "alphabet_match",
+                "instruction": "¡Une la letra grande con la letra pequeña!",
+                "items": [
+                  {
+                    "uppercase": "G",
+                    "lowercase": "g"
+                  },
+                  {
+                    "uppercase": "H",
+                    "lowercase": "h"
+                  },
+                  {
+                    "uppercase": "I",
+                    "lowercase": "i"
+                  },
+                  {
+                    "uppercase": "J",
+                    "lowercase": "j"
+                  },
+                  {
+                    "uppercase": "K",
+                    "lowercase": "k"
+                  },
+                  {
+                    "uppercase": "L",
+                    "lowercase": "l"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "es-1-3",
+            "title": "Letras M a la R",
+            "activities": [
+              {
+                "id": "es-1-3-1",
+                "type": "alphabet",
+                "instruction": "¡Mira la letra y di su nombre en voz alta!",
+                "items": [
+                  {
+                    "letter": "M",
+                    "sound": "emeh",
+                    "example": "Mariposa",
+                    "emoji": "🦋"
+                  },
+                  {
+                    "letter": "N",
+                    "sound": "eneh",
+                    "example": "Nube",
+                    "emoji": "☁️"
+                  },
+                  {
+                    "letter": "Ñ",
+                    "sound": "enyeh",
+                    "example": "Niño",
+                    "emoji": "👦"
+                  },
+                  {
+                    "letter": "O",
+                    "sound": "oh",
+                    "example": "Oso",
+                    "emoji": "🐻"
+                  },
+                  {
+                    "letter": "P",
+                    "sound": "peh",
+                    "example": "Pato",
+                    "emoji": "🦆"
+                  },
+                  {
+                    "letter": "R",
+                    "sound": "ereh",
+                    "example": "Rana",
+                    "emoji": "🐸"
+                  }
+                ]
+              },
+              {
+                "id": "es-1-3-2",
+                "type": "alphabet_match",
+                "instruction": "¡Une la letra grande con la letra pequeña!",
+                "items": [
+                  {
+                    "uppercase": "M",
+                    "lowercase": "m"
+                  },
+                  {
+                    "uppercase": "N",
+                    "lowercase": "n"
+                  },
+                  {
+                    "uppercase": "Ñ",
+                    "lowercase": "ñ"
+                  },
+                  {
+                    "uppercase": "O",
+                    "lowercase": "o"
+                  },
+                  {
+                    "uppercase": "P",
+                    "lowercase": "p"
+                  },
+                  {
+                    "uppercase": "R",
+                    "lowercase": "r"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "es-1-4",
+            "title": "Letras S a la Z",
+            "activities": [
+              {
+                "id": "es-1-4-1",
+                "type": "alphabet",
+                "instruction": "¡Mira la letra y di su nombre en voz alta!",
+                "items": [
+                  {
+                    "letter": "S",
+                    "sound": "eseh",
+                    "example": "Sol",
+                    "emoji": "☀️"
+                  },
+                  {
+                    "letter": "T",
+                    "sound": "teh",
+                    "example": "Toro",
+                    "emoji": "🐂"
+                  },
+                  {
+                    "letter": "U",
+                    "sound": "oo",
+                    "example": "Uva",
+                    "emoji": "🍇"
+                  },
+                  {
+                    "letter": "V",
+                    "sound": "uveh",
+                    "example": "Vaca",
+                    "emoji": "🐄"
+                  },
+                  {
+                    "letter": "W",
+                    "sound": "doble-uveh",
+                    "example": "Wifi",
+                    "emoji": "📶"
+                  },
+                  {
+                    "letter": "X",
+                    "sound": "ekees",
+                    "example": "Xilófono",
+                    "emoji": "🎶"
+                  },
+                  {
+                    "letter": "Y",
+                    "sound": "ee-griega",
+                    "example": "Yema",
+                    "emoji": "🥚"
+                  },
+                  {
+                    "letter": "Z",
+                    "sound": "zetah",
+                    "example": "Zapato",
+                    "emoji": "👟"
+                  }
+                ]
+              },
+              {
+                "id": "es-1-4-2",
+                "type": "alphabet_match",
+                "instruction": "¡Une la letra grande con la letra pequeña!",
+                "items": [
+                  {
+                    "uppercase": "S",
+                    "lowercase": "s"
+                  },
+                  {
+                    "uppercase": "T",
+                    "lowercase": "t"
+                  },
+                  {
+                    "uppercase": "U",
+                    "lowercase": "u"
+                  },
+                  {
+                    "uppercase": "V",
+                    "lowercase": "v"
+                  },
+                  {
+                    "uppercase": "W",
+                    "lowercase": "w"
+                  },
+                  {
+                    "uppercase": "X",
+                    "lowercase": "x"
+                  },
+                  {
+                    "uppercase": "Y",
+                    "lowercase": "y"
+                  },
+                  {
+                    "uppercase": "Z",
+                    "lowercase": "z"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Palabras Básicas",
+        "description": "¡Aprende palabras cortas y simples con imágenes!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "es-2-1",
+            "title": "Animales",
+            "activities": [
+              {
+                "id": "es-2-1-1",
+                "type": "word",
+                "instruction": "¡Lee la palabra y dila en voz alta!",
+                "items": [
+                  {
+                    "word": "gato",
+                    "emoji": "🐱",
+                    "syllables": "ga-to"
+                  },
+                  {
+                    "word": "perro",
+                    "emoji": "🐶",
+                    "syllables": "pe-rro"
+                  },
+                  {
+                    "word": "pato",
+                    "emoji": "🦆",
+                    "syllables": "pa-to"
+                  },
+                  {
+                    "word": "rana",
+                    "emoji": "🐸",
+                    "syllables": "ra-na"
+                  },
+                  {
+                    "word": "oso",
+                    "emoji": "🐻",
+                    "syllables": "o-so"
+                  },
+                  {
+                    "word": "pez",
+                    "emoji": "🐟",
+                    "syllables": "pez"
+                  }
+                ]
+              },
+              {
+                "id": "es-2-1-2",
+                "type": "word_select",
+                "instruction": "¿Qué palabra corresponde a la imagen?",
+                "items": [
+                  {
+                    "emoji": "🐱",
+                    "answer": "gato",
+                    "choices": ["gato", "gorro", "gota"]
+                  },
+                  {
+                    "emoji": "🐶",
+                    "answer": "perro",
+                    "choices": ["perno", "perro", "pero"]
+                  },
+                  {
+                    "emoji": "🐸",
+                    "answer": "rana",
+                    "choices": ["rama", "rana", "ropa"]
+                  },
+                  {
+                    "emoji": "🐻",
+                    "answer": "oso",
+                    "choices": ["oso", "ojo", "oro"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "es-2-2",
+            "title": "Comida",
+            "activities": [
+              {
+                "id": "es-2-2-1",
+                "type": "word",
+                "instruction": "¡Lee la palabra y dila en voz alta!",
+                "items": [
+                  {
+                    "word": "leche",
+                    "emoji": "🥛",
+                    "syllables": "le-che"
+                  },
+                  {
+                    "word": "pan",
+                    "emoji": "🍞",
+                    "syllables": "pan"
+                  },
+                  {
+                    "word": "arroz",
+                    "emoji": "🍚",
+                    "syllables": "a-rroz"
+                  },
+                  {
+                    "word": "sopa",
+                    "emoji": "🍲",
+                    "syllables": "so-pa"
+                  },
+                  {
+                    "word": "fruta",
+                    "emoji": "🍎",
+                    "syllables": "fru-ta"
+                  },
+                  {
+                    "word": "huevo",
+                    "emoji": "🥚",
+                    "syllables": "hue-vo"
+                  }
+                ]
+              },
+              {
+                "id": "es-2-2-2",
+                "type": "word_select",
+                "instruction": "¿Qué palabra corresponde a la imagen?",
+                "items": [
+                  {
+                    "emoji": "🥛",
+                    "answer": "leche",
+                    "choices": ["leche", "lecho", "llave"]
+                  },
+                  {
+                    "emoji": "🍞",
+                    "answer": "pan",
+                    "choices": ["pan", "pam", "paz"]
+                  },
+                  {
+                    "emoji": "🍲",
+                    "answer": "sopa",
+                    "choices": ["sola", "sopa", "sosa"]
+                  },
+                  {
+                    "emoji": "🍎",
+                    "answer": "fruta",
+                    "choices": ["fluta", "fruta", "falta"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "es-2-3",
+            "title": "Colores",
+            "activities": [
+              {
+                "id": "es-2-3-1",
+                "type": "word",
+                "instruction": "¡Lee la palabra y dila en voz alta!",
+                "items": [
+                  {
+                    "word": "rojo",
+                    "emoji": "🔴",
+                    "syllables": "ro-jo"
+                  },
+                  {
+                    "word": "azul",
+                    "emoji": "🔵",
+                    "syllables": "a-zul"
+                  },
+                  {
+                    "word": "verde",
+                    "emoji": "🟢",
+                    "syllables": "ver-de"
+                  },
+                  {
+                    "word": "grande",
+                    "emoji": "🐘",
+                    "syllables": "gran-de"
+                  },
+                  {
+                    "word": "pequeño",
+                    "emoji": "🐭",
+                    "syllables": "pe-que-ño"
+                  },
+                  {
+                    "word": "redondo",
+                    "emoji": "⭕",
+                    "syllables": "re-don-do"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "title": "Frases Cortas",
+        "description": "¡Junta palabras para hacer frases!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "es-3-1",
+            "title": "Describiendo cosas",
+            "activities": [
+              {
+                "id": "es-3-1-1",
+                "type": "phrase",
+                "instruction": "¡Lee la frase en voz alta!",
+                "items": [
+                  {
+                    "phrase": "perro grande",
+                    "emoji": "🐕",
+                    "highlight": ["perro", "grande"]
+                  },
+                  {
+                    "phrase": "manzana roja",
+                    "emoji": "🍎",
+                    "highlight": ["manzana", "roja"]
+                  },
+                  {
+                    "phrase": "gato pequeño",
+                    "emoji": "🐱",
+                    "highlight": ["gato", "pequeño"]
+                  },
+                  {
+                    "phrase": "pájaro azul",
+                    "emoji": "🐦",
+                    "highlight": ["pájaro", "azul"]
+                  },
+                  {
+                    "phrase": "sopa caliente",
+                    "emoji": "🍲",
+                    "highlight": ["sopa", "caliente"]
+                  },
+                  {
+                    "phrase": "leche fría",
+                    "emoji": "🥛",
+                    "highlight": ["leche", "fría"]
+                  }
+                ]
+              },
+              {
+                "id": "es-3-1-2",
+                "type": "phrase_build",
+                "instruction": "¡Toca las palabras en el orden correcto!",
+                "items": [
+                  {
+                    "emoji": "🍎",
+                    "answer": ["manzana", "roja"],
+                    "scrambled": ["roja", "manzana"]
+                  },
+                  {
+                    "emoji": "🐕",
+                    "answer": ["perro", "grande"],
+                    "scrambled": ["grande", "perro"]
+                  },
+                  {
+                    "emoji": "🐱",
+                    "answer": ["gato", "pequeño"],
+                    "scrambled": ["pequeño", "gato"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "es-3-2",
+            "title": "Frases de Acción",
+            "activities": [
+              {
+                "id": "es-3-2-1",
+                "type": "phrase",
+                "instruction": "¡Lee la frase en voz alta!",
+                "items": [
+                  {
+                    "phrase": "correr rápido",
+                    "emoji": "🏃",
+                    "highlight": ["correr", "rápido"]
+                  },
+                  {
+                    "phrase": "comer bien",
+                    "emoji": "🍽️",
+                    "highlight": ["comer", "bien"]
+                  },
+                  {
+                    "phrase": "ver pájaros",
+                    "emoji": "🐦",
+                    "highlight": ["ver", "pájaros"]
+                  },
+                  {
+                    "phrase": "sentarse aquí",
+                    "emoji": "🪑",
+                    "highlight": ["sentarse", "aquí"]
+                  },
+                  {
+                    "phrase": "despertar pronto",
+                    "emoji": "⏰",
+                    "highlight": ["despertar", "pronto"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "title": "Oraciones Simples",
+        "description": "¡Lee oraciones completas de principio a fin!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "es-4-1",
+            "title": "¿Qué hacen?",
+            "activities": [
+              {
+                "id": "es-4-1-1",
+                "type": "sentence",
+                "instruction": "Lee la oración. ¿La entiendes?",
+                "items": [
+                  {
+                    "sentence": "El gato duerme en la silla.",
+                    "emoji": "🐱",
+                    "focus": "subject-verb"
+                  },
+                  {
+                    "sentence": "El perro corre en el parque.",
+                    "emoji": "🐶",
+                    "focus": "subject-verb"
+                  },
+                  {
+                    "sentence": "El pájaro canta una canción.",
+                    "emoji": "🐦",
+                    "focus": "subject-verb"
+                  },
+                  {
+                    "sentence": "La vaca come el pasto verde.",
+                    "emoji": "🐄",
+                    "focus": "subject-verb-object"
+                  },
+                  {
+                    "sentence": "La gallina pone un huevo.",
+                    "emoji": "🐔",
+                    "focus": "subject-verb-object"
+                  }
+                ]
+              },
+              {
+                "id": "es-4-1-2",
+                "type": "sentence_build",
+                "instruction": "¡Ordena las palabras para hacer una oración!",
+                "items": [
+                  {
+                    "answer": ["El", "gato", "duerme", "en", "la", "silla."],
+                    "scrambled": ["silla.", "duerme", "El", "en", "la", "gato"],
+                    "emoji": "🐱"
+                  },
+                  {
+                    "answer": ["El", "perro", "corre", "en", "el", "parque."],
+                    "scrambled": [
+                      "parque.",
+                      "en",
+                      "corre",
+                      "perro",
+                      "el",
+                      "El"
+                    ],
+                    "emoji": "🐶"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "es-4-2",
+            "title": "¿Dónde están?",
+            "activities": [
+              {
+                "id": "es-4-2-1",
+                "type": "sentence",
+                "instruction": "Lee la oración. ¿La entiendes?",
+                "items": [
+                  {
+                    "sentence": "La pelota está debajo de la cama.",
+                    "emoji": "🛏️",
+                    "focus": "location"
+                  },
+                  {
+                    "sentence": "El libro está sobre la mesa.",
+                    "emoji": "📖",
+                    "focus": "location"
+                  },
+                  {
+                    "sentence": "El pez está dentro del tazón.",
+                    "emoji": "🐟",
+                    "focus": "location"
+                  },
+                  {
+                    "sentence": "El sol está en el cielo.",
+                    "emoji": "☀️",
+                    "focus": "location"
+                  },
+                  {
+                    "sentence": "La flor está en la maceta.",
+                    "emoji": "🌸",
+                    "focus": "location"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "title": "Oraciones Intermedias",
+        "description": "¡Lee ideas más largas y cuentos cortos!",
+        "critter": "ollie",
+        "lessons": [
+          {
+            "id": "es-5-1",
+            "title": "Un Día en la Granja",
+            "activities": [
+              {
+                "id": "es-5-1-1",
+                "type": "paragraph",
+                "instruction": "¡Lee todo el cuento!",
+                "items": [
+                  {
+                    "title": "Mañana en la Granja",
+                    "text": "El sol sale sobre la granja. La gallina se despierta primero. Ella camina al granero y pone un huevo grande. El perro la escucha y empieza a ladrar. El granjero sale y le dice buenos días a todos los animales.",
+                    "emoji": "🌅",
+                    "comprehension": [
+                      {
+                        "question": "¿Qué hace la gallina primero?",
+                        "answer": "Pone un huevo grande.",
+                        "choices": [
+                          "Corre.",
+                          "Pone un huevo grande.",
+                          "Se va a dormir."
+                        ]
+                      },
+                      {
+                        "question": "¿Quién dice buenos días?",
+                        "answer": "El granjero.",
+                        "choices": ["El perro.", "La gallina.", "El granjero."]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "es-5-2",
+            "title": "Un Día en el Parque",
+            "activities": [
+              {
+                "id": "es-5-2-1",
+                "type": "paragraph",
+                "instruction": "¡Lee todo el cuento!",
+                "items": [
+                  {
+                    "title": "Diversión en el Parque",
+                    "text": "Lucía y su perro van al parque. El perro corre y juega en el pasto. Lucía se sienta bajo un árbol grande. Ella ve un pájaro azul cantando entre las ramas. El viento sopla suavemente. Es un día muy feliz.",
+                    "emoji": "🌳",
+                    "comprehension": [
+                      {
+                        "question": "¿Dónde juega el perro?",
+                        "answer": "En el pasto.",
+                        "choices": [
+                          "En el árbol.",
+                          "En el pasto.",
+                          "En el agua."
+                        ]
+                      },
+                      {
+                        "question": "¿Qué ve Lucía en el árbol?",
+                        "answer": "Un pájaro azul.",
+                        "choices": [
+                          "Un nido.",
+                          "Un pájaro azul.",
+                          "Una flor roja."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "es-5-3",
+            "title": "Oraciones Conectadas",
+            "activities": [
+              {
+                "id": "es-5-3-1",
+                "type": "sentence",
+                "instruction": "¡Lee cada oración con cuidado!",
+                "items": [
+                  {
+                    "sentence": "La niña pequeña tiene un paraguas rojo.",
+                    "emoji": "☂️",
+                    "focus": "adjective"
+                  },
+                  {
+                    "sentence": "Su perro es café y muy esponjoso.",
+                    "emoji": "🐶",
+                    "focus": "adjective"
+                  },
+                  {
+                    "sentence": "Ellos caminan despacio por la calle mojada.",
+                    "emoji": "🌧️",
+                    "focus": "adverb"
+                  },
+                  {
+                    "sentence": "Ella sostiene el paraguas alto sobre su cabeza.",
+                    "emoji": "☁️",
+                    "focus": "adverb"
+                  },
+                  {
+                    "sentence": "El perro sacude la lluvia de su pelo.",
+                    "emoji": "💦",
+                    "focus": "action"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
