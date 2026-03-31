@@ -1,134 +1,76 @@
 # LingoCritters 🦉🐢🦜
 
-A bilingual learning app designed to help children ages 5–7 learn two languages through animal-guided lessons.
+A bilingual learning app designed to help children ages master two languages(English & Spanish) through interactive, animal-guided lessons.
 
 ---
 
 ## Overview
 
-LingoCritters is a web-based educational app built for bilingual children and their families. Learning two languages at once can be challenging for kids — LingoCritters makes it feel natural and fun through interactive lessons guided by three animal characters: Ollie the Owl, Teo the Turtle, and Pico the Parrot. Parents and guardians stay in control by managing their child's account, tracking progress, and switching language pairs at any time.
-
-> LingoCritters is designed to be used with a parent or guardian present.
+LingoCritters makes language acquisition natural and fun for young learners. Guided by three characters—**Ollie the Owl** and **Pico the Parrot**—children engage in reading and speaking exercises. The platform features a dual-portal system where parents manage accounts and track progress, while children are funneled directly into a gamified learning environment.
 
 ---
 
 ## Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| Next.js / React | Frontend framework and routing |
-| AWS RDS | Database for storing user accounts, progress, and lesson data |
-| HuggingFace API | AI-powered pronunciation feedback for Pico's speaking lessons |
-| Tailwind CSS | Styling and responsive design |
+- **Frontend:** Next.js / React
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+- **Database:** MySQL (hosted via Railway)
+- **AI Integration:** Hugging Face Inference API
+  - **Llama 3:** Dynamic story generation
+  - **Kokoro:** Text-to-Speech (TTS) for oral lessons
+- **Data Handling:** Hard-coded JSON for standardized reading curriculum
 
 ---
 
-## Pages & Features
+## Key Features
 
-### Home
-- Introduces LingoCritters and its mission
-- Showcases the three animal guides
-- Language pair selector for families to choose their two languages
-- Call to action buttons — Login and Get Started
+### Learn Portal
 
-### About
-- Mission statement and app purpose
-- Meet the critter guides — Ollie, Teo, and Pico
-- Information for parents and guardians
+The core educational hub where children select their learning path:
 
-### Login
-- Email and password authentication
-- Redirects to dashboard based on user role
+- 📖 **Reading with Ollie:** Interactive word cards and stories powered by structured JSON data.
+- 🎙️ **Speaking with Pico:** AI-powered speaking practice using Llama 3 for content generation and Kokoro for high-quality voice synthesis.
 
-### Register
-- Full name, email, and password fields
-- Role selector — Child or Parent / Guardian
-- Password confirmation validation
+### Dashboard & Management
 
-### Learn
-The core educational page with three lesson modes:
-- 📖 **Reading with Ollie** — word cards that flip between both selected languages
-- ✏️ **Writing with Teo** — letter tracing practice
-- 🎙️ **Speaking with Pico** — AI-powered pronunciation feedback via HuggingFace
-
-> The app is fully functional without AI. HuggingFace enhances Pico's speaking lessons but is not required for the core experience.
-
-### Dashboard
-Personalized view based on who is logged in:
-- **Child view** — earned stars, completed lessons, critter buddy, continue learning button
-- **Parent view** — child progress across all 3 lesson types, language pair switcher, manage child accounts
-- **Admin view** — all users and activity, manage lesson content, platform usage overview
-
-### Contact
-- Contact form with name, email, phone, and message fields
-- FAQ accordion covering common questions
+- **Child View:** Direct redirection to "Learn" mode upon login to keep the focus on education.
+- **Parent View:** Secure login to create, monitor, and manage multiple child accounts.
+- **Language Control:** Toggle and switch language pairs to customize the bilingual experience.
 
 ---
 
 ## Getting Started
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) installed on your machine
-- npm (comes with Node.js)
+
+- [Node.js](https://nodejs.org/)
+- npm (included with Node.js)
 
 ### Installation
 
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/lingocritters.git
-```
+1.  **Clone the repository**
 
-2. Navigate into the project folder
-```bash
-cd lingocritters/my-next-app
-```
+    ```bash
+    git clone [https://github.com/ImaniMoore/LingoCritters.git](https://github.com/ImaniMoore/LingoCritters.git)
+    ```
 
-3. Install dependencies
-```bash
-npm install
-```
+2.  **Install dependencies**
 
-4. Run the development server
-```bash
-npm run dev
-```
+    ```bash
+    cd lingocritters
+    npm install
+    ```
 
-5. Open your browser and go to
-```
-http://localhost:3000
-```
+3.  **Configure Environment**
+    Set up your `.env` file with your Railway MySQL credentials and Hugging Face API keys.
+
+4.  **Launch Development Server**
+    ```bash
+    npm run dev
+    ```
+    Access the app at `http://localhost:3000`.
 
 ---
 
-## Project Status
-
-Nearly complete. Core pages and lesson structure are built. AWS RDS integration and HuggingFace API connection are in progress.
-
----
-
-## Folder Structure
-
-```
-src/
-├── app/
-│   ├── (auth)/
-│   │   ├── login/
-│   │   └── signup/
-│   ├── dashboard/
-│   ├── learn/
-│   ├── about/
-│   ├── contact/
-│   ├── layout.jsx
-│   └── page.jsx
-├── components/
-│   ├── auth/
-│   ├── critters/
-│   ├── lessons/
-│   └── ui/
-├── hooks/
-└── lib/
-```
-
----
-
-*LingoCritters — Where every word opens a new world.*
+_LingoCritters — Where every word opens a new world._
