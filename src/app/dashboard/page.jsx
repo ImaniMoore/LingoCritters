@@ -50,7 +50,7 @@ function LevelSlider({ label, value, onChange }) {
   );
 }
 
-// ─── Create Child Form ───────────���────────────────────────────────────────────
+// ─── Create Child Form ───────────────────────────────────────────────────────
 
 function CreateChildForm({ onCreated }) {
   const [form, setForm] = useState({
@@ -234,7 +234,6 @@ function ChildCard({ child, onSaved }) {
 
   return (
     <div className="bg-white border-4 border-deep-dark rounded-3xl p-8 shadow-comic-xl">
-      {/* Header */}
       <div className="flex items-start justify-between mb-6">
         <div>
           <h2 className="text-2xl font-black">
@@ -243,14 +242,12 @@ function ChildCard({ child, onSaved }) {
           </h2>
           <p className="font-bold text-sm opacity-60">@{child.username}</p>
         </div>
-        {/* Progress badge */}
         <div className="bg-star-yellow border-4 border-deep-dark rounded-2xl px-4 py-2 text-center min-w-[80px]">
           <p className="text-xs font-black opacity-60">PROGRESS</p>
           <p className="text-xl font-black">{child.progress ?? 0}%</p>
         </div>
       </div>
 
-      {/* Progress bar */}
       <div className="w-full bg-warm-white border-4 border-deep-dark rounded-xl h-5 overflow-hidden mb-6">
         <div
           className="h-full bg-ollie-purple transition-all"
@@ -258,7 +255,6 @@ function ChildCard({ child, onSaved }) {
         />
       </div>
 
-      {/* Language selects */}
       <div className="grid md:grid-cols-2 gap-4 mb-6">
         <div>
           <label className="block font-black mb-1 text-sm">
@@ -284,7 +280,6 @@ function ChildCard({ child, onSaved }) {
         </div>
       </div>
 
-      {/* Level sliders */}
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         <LevelSlider
           label="Reading Level"
@@ -305,7 +300,6 @@ function ChildCard({ child, onSaved }) {
         />
       </div>
 
-      {/* Reset password */}
       <div className="border-t-4 border-deep-dark pt-6">
         <p className="font-black mb-2">Reset Password</p>
         <div className="flex gap-3">
@@ -342,34 +336,14 @@ function ChildCard({ child, onSaved }) {
 
 export default function Dashboard() {
   const router = useRouter();
-  const user = useRequireAuth("parent"); // ✅ NOW INSIDE FUNCTION BODY
+  const user = useRequireAuth("parent");
   const [children, setChildren] = useState([]);
   const [loadingChildren, setLoadingChildren] = useState(true);
-  const [streak, setStreak] = useState(1);
-
-  // Streak logic
-  useEffect(() => {
-    const today = new Date().toDateString();
-    const lastLogin = localStorage.getItem("lastLogin");
-    if (lastLogin !== today) {
-      const prev = parseInt(localStorage.getItem("streak") || "0");
-      const next = prev + 1;
-      localStorage.setItem("streak", next);
-      localStorage.setItem("lastLogin", today);
-      setStreak(next);
-    } else {
-      setStreak(parseInt(localStorage.getItem("streak") || "1"));
-    }
-  }, []);
 
   // Fetch children when user loads
   useEffect(() => {
     if (user) {
-      setLoadingChildren(true);
-      fetch("/api/children")
-        .then((r) => r.json())
-        .then(({ children }) => setChildren(children || []))
-        .finally(() => setLoadingChildren(false));
+      fetchChildren();
     }
   }, [user]);
 
@@ -381,20 +355,13 @@ export default function Dashboard() {
       .finally(() => setLoadingChildren(false));
   };
 
-  // If auth not ready or user is not parent, don't render
   if (!user) return null;
 
   return (
     <main className="min-h-screen bg-warm-white px-6 py-16 font-display">
-      <h1 className="text-5xl font-black text-center mb-6">Parent Dashboard</h1>
-
-      {/* Streak */}
-      <div className="max-w-4xl mx-auto mb-10">
-        <div className="bg-star-yellow border-4 border-deep-dark rounded-3xl p-6 text-center shadow-comic-xl">
-          <p className="text-xl font-black">Login Streak 🔥</p>
-          <p className="text-4xl font-black mt-2">{streak} days</p>
-        </div>
-      </div>
+      <h1 className="text-5xl font-black text-center mb-10">
+        Parent Dashboard
+      </h1>
 
       <div className="max-w-5xl mx-auto flex flex-col gap-10">
         {/* Create child */}

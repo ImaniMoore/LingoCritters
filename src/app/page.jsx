@@ -223,10 +223,10 @@ export default function Home() {
             <div className="flex-1 bg-white border-4 border-deep-dark rounded-3xl p-8 shadow-comic-xl hover:-translate-y-1 transition-transform duration-150">
               <div className="text-4xl font-black text-deep-dark mb-3">3</div>
               <h3 className="text-xl font-black text-deep-dark mb-2">
-                Earn Stars
+                Track Progress
               </h3>
               <p className="text-deep-dark font-semibold text-sm opacity-70">
-                Complete lessons and collect stars to track your progress.
+                Complete lessons and track your progress.
               </p>
             </div>
           </div>

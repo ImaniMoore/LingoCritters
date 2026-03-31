@@ -1,5 +1,6 @@
 "use client";
-
+import Image from "next/image";
+import image1 from "../../../public/ImaniMoore.jpg";
 export default function About() {
   return (
     <>
@@ -40,11 +41,7 @@ export default function About() {
 
           <div className="max-w-2xl mx-auto flex flex-col items-center gap-8">
             <div className="w-40 h-40 rounded-full border-4 border-white shadow-comic-xl overflow-hidden bg-warm-white">
-              <img
-                src=""
-                alt="me"
-                className="w-full h-full object-cover"
-              />
+              <Image src={image1} alt="Imani Moore" />
             </div>
 
             <div className="bg-white border-4 border-deep-dark rounded-3xl p-8 shadow-comic-xl text-left">
